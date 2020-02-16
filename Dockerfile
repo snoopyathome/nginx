@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 RUN apk add --update nginx nginx-mod-http-headers-more &&\
     mkdir -p /tmp/nginx/client-body

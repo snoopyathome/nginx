@@ -5,7 +5,8 @@ RUN apk add --update nginx nginx-mod-http-headers-more &&\
 
 COPY files/start.sh /start.sh
 
-RUN chown -R nginx:www-data /web &&\
+RUN mkdir /web &&\
+    chown -R nginx:www-data /web &&\
     chown -R nginx /var/lib/nginx &&\
     chmod +x /start.sh &&\
     rm -rf /var/cache/apk/*

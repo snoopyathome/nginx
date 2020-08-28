@@ -5,7 +5,7 @@ RUN apk add --update nginx nginx-mod-http-headers-more &&\
     mkdir /web &&\
     chown -R nginx:www-data /web &&\
     chown -R nginx /var/lib/nginx &&\
-    mkidr /run/nginx &&\
+    mkdir /run/nginx &&\
     rm -rf /var/cache/apk/*
 
 CMD ["nginx", "-g", "daemon off;"]

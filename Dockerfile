@@ -8,4 +8,4 @@ RUN apk add --update nginx nginx-mod-http-headers-more &&\
     mkidr /run/nginx &&\
     rm -rf /var/cache/apk/*
 
-CMD ["nginx", "-c", "/etc/nginx/nginx.conf"]
+CMD ["nginx" "-g" "daemon off;"]

@@ -1,6 +1,6 @@
 FROM alpine:3.12
 
-RUN apk add --update nginx nginx-mod-http-headers-more &&\
+RUN apk add --update nginx nginx-mod-http-headers-more gnu-libiconv &&\
     mkdir -p /tmp/nginx/client-body &&\
     mkdir /web &&\
     chown -R nginx:www-data /web &&\
